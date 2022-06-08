@@ -1,0 +1,53 @@
+// Mobile: 375px
+// Desktop: 1440px
+
+@media screen and (max-width: 375px) {
+    .main{
+        @include flexbox (flex, column, nowrap, center, center);
+        background-color: $main-bg;
+
+        .card{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            max-width: 85%;
+            background-color: $card-bg;
+            @include flexbox (flex, column, nowrap, center, flex-start);
+            gap: 25px;
+            border-radius: 15px;
+            img{
+                max-width: 80%;
+                align-self: center;
+            }
+            h1{
+                color: $white;
+                font-size: $h1-font-size;
+            }
+            p{
+                color: $soft-blue;
+                font-weight: normal;
+                font-size: $p-font-size;
+                span{
+                    color: $white;
+                }
+            }
+            .div1{
+                max-width: 80%;
+                @include flexbox(flex, row, nowrap, space-between, center);
+            }
+            .div2{
+                max-width: 80%;
+                @include flexbox(flex, row, nowrap, flex-start, center);
+                img{
+                    max-width: 10%;
+                    // transform: scale(0.3);
+                    // checkear svg en w3
+                    // border: solid 5px $white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+    
+}

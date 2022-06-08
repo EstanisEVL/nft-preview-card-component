@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: Outfit;
+  src: url(../../fonts/Outfit-VariableFont_wght.ttf); }
+
+body {
+  font-family: 'Outfit'; }
+
+@media screen and (max-width: 375px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d192b; }
+    .main .card {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      max-width: 85%;
+      background-color: #14253d;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 25px;
+      border-radius: 15px; }
+      .main .card img {
+        max-width: 80%;
+        align-self: center; }
+      .main .card h1 {
+        color: white;
+        font-size: 25px; }
+      .main .card p {
+        color: #8bacda;
+        font-weight: normal;
+        font-size: 18px; }
+        .main .card p span {
+          color: white; }
+      .main .card .div1 {
+        max-width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center; }
+      .main .card .div2 {
+        max-width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center; }
+        .main .card .div2 img {
+          max-width: 10%; } }
+
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+  .attribution a {
+    text-decoration: none;
+    color: #3e52a3; }
