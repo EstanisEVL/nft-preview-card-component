@@ -10,8 +10,10 @@
 body {
   font-family: 'Outfit'; }
 
+/*---- MOBILE ----*/
 @media screen and (max-width: 375px) {
   .main {
+    height: 95vh;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -19,45 +21,183 @@ body {
     align-items: center;
     background-color: #0d192b; }
     .main .card {
-      margin-top: 100px;
-      margin-bottom: 100px;
-      max-width: 85%;
+      margin-top: 60px;
+      margin-bottom: 60px;
+      max-width: 90%;
       background-color: #14253d;
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 25px;
+      justify-content: flex-start;
+      align-items: center;
       border-radius: 15px; }
-      .main .card img {
-        max-width: 80%;
-        align-self: center; }
-      .main .card h1 {
-        color: white;
-        font-size: 25px; }
-      .main .card p {
-        color: #8bacda;
-        font-weight: normal;
-        font-size: 18px; }
-        .main .card p span {
-          color: white; }
-      .main .card .div1 {
-        max-width: 80%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center; }
-      .main .card .div2 {
-        max-width: 80%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: center; }
-        .main .card .div2 img {
-          max-width: 10%; } }
+      .main .card .container {
+        margin-right: 25px;
+        margin-left: 25px; }
+        .main .card .container img {
+          margin-top: 25px;
+          max-width: 100%;
+          border-radius: 10px; }
+        .main .card .container .div1 {
+          margin-top: 25px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          gap: 15px; }
+          .main .card .container .div1 h1 {
+            color: white;
+            font-size: 25px;
+            font-weight: 500; }
+          .main .card .container .div1 p {
+            color: #8bacda;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 30px; }
+            .main .card .container .div1 p span {
+              color: white; }
+        .main .card .container .div2 {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+          color: #8bacda; }
+          .main .card .container .div2 div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5px;
+            font-weight: normal;
+            font-size: 18px; }
+          .main .card .container .div2 div:first-of-type {
+            color: #00fff7; }
+          .main .card .container .div2 div:last-of-type {
+            font-weight: 300; }
+        .main .card .container hr {
+          margin-top: 15px;
+          width: 100%;
+          color: #2f415b; }
+        .main .card .container .div3 {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 20px;
+          margin-top: 15px;
+          margin-bottom: 25px; }
+          .main .card .container .div3 img {
+            margin-top: 0;
+            max-width: 13%;
+            border: solid 1px white;
+            border-radius: 50%; }
+          .main .card .container .div3 p {
+            color: #8bacda; }
+            .main .card .container .div3 p span {
+              color: white; } }
+
+@media screen and (min-width: 375px) {
+  .main {
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d192b; }
+    .main .card {
+      max-width: 350px;
+      margin-top: 150px;
+      margin-bottom: 150px;
+      background-color: #14253d;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 40px 30px 30px #0d172b; }
+      .main .card .container {
+        max-width: 88%; }
+        .main .card .container img {
+          max-width: 100%;
+          margin-top: 20px;
+          border-radius: 10px; }
+          .main .card .container img:hover {
+            background: url(images\icon-view.svg); }
+        .main .card .container .div1 {
+          margin-top: 25px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+          gap: 15px; }
+          .main .card .container .div1 h1 {
+            color: white;
+            font-size: 25px;
+            font-weight: 500; }
+            .main .card .container .div1 h1:hover {
+              color: #00fff7;
+              cursor: pointer; }
+          .main .card .container .div1 p {
+            color: #8bacda;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 30px; }
+            .main .card .container .div1 p span {
+              color: white; }
+        .main .card .container .div2 {
+          margin-top: 25px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+          color: #8bacda; }
+          .main .card .container .div2 div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 5px;
+            font-weight: normal;
+            font-size: 18px; }
+          .main .card .container .div2 div:first-of-type {
+            color: #00fff7; }
+          .main .card .container .div2 div:last-of-type {
+            font-weight: 300; }
+        .main .card .container hr {
+          margin-top: 25px;
+          width: 100%;
+          color: #2f415b; }
+        .main .card .container .div3 {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 20px;
+          margin-top: 15px;
+          margin-bottom: 25px; }
+          .main .card .container .div3 img {
+            margin-top: 0;
+            max-width: 13%;
+            border: solid 1px white;
+            border-radius: 50%; }
+          .main .card .container .div3 p {
+            color: #8bacda; }
+            .main .card .container .div3 p span {
+              color: white; }
+              .main .card .container .div3 p span:hover {
+                color: #00fff7;
+                cursor: pointer; } }
 
 .attribution {
   font-size: 11px;

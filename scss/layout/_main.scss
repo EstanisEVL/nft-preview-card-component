@@ -1,53 +1,184 @@
-// Mobile: 375px
-// Desktop: 1440px
-
+/*---- MOBILE ----*/
 @media screen and (max-width: 375px) {
     .main{
+        height: 95vh;
         @include flexbox (flex, column, nowrap, center, center);
         background-color: $main-bg;
-
         .card{
-            margin-top: 100px;
-            margin-bottom: 100px;
-            max-width: 85%;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            max-width: 90%;
             background-color: $card-bg;
-            @include flexbox (flex, column, nowrap, center, flex-start);
-            gap: 25px;
+            @include flexbox (flex, column, nowrap, flex-start, center);
             border-radius: 15px;
-            img{
-                max-width: 80%;
-                align-self: center;
-            }
-            h1{
-                color: $white;
-                font-size: $h1-font-size;
-            }
-            p{
-                color: $soft-blue;
-                font-weight: normal;
-                font-size: $p-font-size;
-                span{
-                    color: $white;
-                }
-            }
-            .div1{
-                max-width: 80%;
-                @include flexbox(flex, row, nowrap, space-between, center);
-            }
-            .div2{
-                max-width: 80%;
-                @include flexbox(flex, row, nowrap, flex-start, center);
+            // box-shadow: 10px 10px $main-bg;
+            .container{
+                margin-right: 25px;
+                margin-left: 25px;
                 img{
-                    max-width: 10%;
-                    // transform: scale(0.3);
-                    // checkear svg en w3
-                    // border: solid 5px $white;
+                    margin-top: 25px;
+                    max-width: 100%;
+                    border-radius: 10px;
+                }
+                .div1{
+                    margin-top: 25px;
+                    @include flexbox(flex, column, nowrap, flex-start, stretch);
+                    gap: 15px;
+                    h1{
+                        color: $white;
+                        font-size: $h1-font-size;
+                        font-weight: 500;
+                    }
+                    p{
+                        color: $soft-blue;
+                        font-weight: 300;
+                        font-size: $p1-font-size;
+                        line-height: 30px;
+                        span{
+                            color: $white;
+                        }
+                    }
+                }
+                .div2{
+                    margin-top: 20px;
+                    @include flexbox(flex, row, nowrap, space-between, center);
+                    color: $soft-blue;
+                    div{
+                        @include flexbox(flex, row, nowrap, flex-start, center);
+                        gap: 5px;
+                        font-weight: normal;
+                        font-size: $p-font-size;
+                    }
+                    div:first-of-type{
+                        color: $cyan;
+                    }
+                    div:last-of-type{
+                        font-weight: 300;
+                    }
+                }
+                hr{
+                    margin-top: 15px;
+                    width: 100%;
+                    color: $line;
+                }
+                .div3{
+                    @include flexbox(flex, row, nowrap, flex-start, center);
+                    gap: 20px;
+                    margin-top: 15px;
+                    margin-bottom: 25px;
+                    img{
+                        margin-top: 0;
+                        max-width: 13%;
+                        border: solid 1px $white;
+                        border-radius: 50%;
+                    }
+                    p{
+                        color: $soft-blue;
+                        span{
+                            color: $white;
+                        }
+                    } 
                 }
             }
+            
         }
     }
 }
 
 @media screen and (min-width: 375px) {
-    
+    .main{
+        padding-bottom: 200px;
+        @include flexbox (flex, column, nowrap, center, center);
+        background-color: $main-bg;
+        .card{
+            max-width: 350px;
+            margin-top: 150px;
+            margin-bottom: 150px;
+            background-color: $card-bg;
+            border-radius: 15px;
+            @include flexbox (flex, column, nowrap, center, center);
+            box-shadow: 0px 40px 30px 30px hsl(220, 54%, 11%);
+            .container{
+                max-width: 88%;
+                img{
+                    max-width: 100%;
+                    margin-top: 20px;
+                    border-radius: 10px;
+                    &:hover{
+                        
+                        background: url(images\icon-view.svg);
+                    }
+                }
+                
+                .div1{
+                    margin-top: 25px;
+                    @include flexbox(flex, column, nowrap, flex-start, stretch);
+                    gap: 15px;
+                    h1{
+                        color: $white;
+                        font-size: $h1-font-size;
+                        font-weight: 500;
+                        &:hover{
+                            color: $cyan;
+                            cursor: pointer;
+                        }
+                    }
+                    p{
+                        color: $soft-blue;
+                        font-weight: 300;
+                        font-size: $p-font-size;
+                        line-height: 30px;
+                        span{
+                            color: $white;
+                        }
+                    }
+                }
+                .div2{
+                    margin-top: 25px;
+                    @include flexbox(flex, row, nowrap, space-between, center);
+                    color: $soft-blue;
+                    div{
+                        @include flexbox(flex, row, nowrap, flex-start, center);
+                        gap: 5px;
+                        font-weight: normal;
+                        font-size: $p-font-size;
+                    }
+                    div:first-of-type{
+                        color: $cyan;
+                    }
+                    div:last-of-type{
+                        font-weight: 300;
+                    }
+                }
+                hr{
+                    margin-top: 25px;
+                    width: 100%;
+                    color: $line;
+                }
+                .div3{
+                    @include flexbox(flex, row, nowrap, flex-start, center);
+                    gap: 20px;
+                    margin-top: 15px;
+                    margin-bottom: 25px;
+                    img{
+                        margin-top: 0;
+                        max-width: 13%;
+                        border: solid 1px $white;
+                        border-radius: 50%;
+                    }
+                    p{
+                        color: $soft-blue;
+                        span{
+                            color: $white;
+                            &:hover{
+                                color: $cyan;
+                                cursor: pointer;
+                            }
+                        }
+                    } 
+                }
+            }
+            
+        }
+    }
 }
