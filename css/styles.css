@@ -30,14 +30,30 @@ body {
       flex-wrap: nowrap;
       justify-content: flex-start;
       align-items: center;
-      border-radius: 15px; }
+      border-radius: 15px;
+      box-shadow: 0px 40px 30px 30px #0d162b; }
       .main .card .container {
-        margin-right: 25px;
-        margin-left: 25px; }
-        .main .card .container img {
-          margin-top: 25px;
-          max-width: 100%;
+        max-width: 88%; }
+        .main .card .container .image {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+          max-width: 300px;
+          height: 310px;
+          background-image: url(../../images/image-equilibrium.jpg);
+          background-size: cover;
+          margin-top: 20px;
           border-radius: 10px; }
+          .main .card .container .image svg {
+            display: none; }
+          .main .card .container .image:active {
+            cursor: pointer;
+            background: linear-gradient(rgba(0, 255, 247, 0.5), rgba(0, 255, 247, 0.5)), url(../../images/image-equilibrium.jpg);
+            background-size: cover; }
+            .main .card .container .image:active svg {
+              display: inline; }
         .main .card .container .div1 {
           margin-top: 25px;
           display: flex;
@@ -50,6 +66,9 @@ body {
             color: white;
             font-size: 25px;
             font-weight: 500; }
+            .main .card .container .div1 h1:active {
+              color: #00fff7;
+              cursor: pointer; }
           .main .card .container .div1 p {
             color: #8bacda;
             font-weight: 300;
@@ -99,7 +118,10 @@ body {
           .main .card .container .div3 p {
             color: #8bacda; }
             .main .card .container .div3 p span {
-              color: white; } }
+              color: white; }
+              .main .card .container .div3 p span:active {
+                color: #00fff7;
+                cursor: pointer; } }
 
 @media screen and (min-width: 375px) {
   .main {
@@ -124,12 +146,26 @@ body {
       box-shadow: 0px 40px 30px 30px #0d172b; }
       .main .card .container {
         max-width: 88%; }
-        .main .card .container img {
-          max-width: 100%;
+        .main .card .container .image {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+          width: 310px;
+          height: 310px;
+          background-image: url(../../images/image-equilibrium.jpg);
+          background-size: cover;
           margin-top: 20px;
           border-radius: 10px; }
-          .main .card .container img:hover {
-            background: url(images\icon-view.svg); }
+          .main .card .container .image svg {
+            display: none; }
+          .main .card .container .image:active {
+            cursor: pointer;
+            background: linear-gradient(rgba(0, 255, 247, 0.5), rgba(0, 255, 247, 0.5)), url(../../images/image-equilibrium.jpg);
+            background-size: cover; }
+            .main .card .container .image:active svg {
+              display: inline; }
         .main .card .container .div1 {
           margin-top: 25px;
           display: flex;
@@ -142,7 +178,7 @@ body {
             color: white;
             font-size: 25px;
             font-weight: 500; }
-            .main .card .container .div1 h1:hover {
+            .main .card .container .div1 h1:active {
               color: #00fff7;
               cursor: pointer; }
           .main .card .container .div1 p {
@@ -195,7 +231,7 @@ body {
             color: #8bacda; }
             .main .card .container .div3 p span {
               color: white; }
-              .main .card .container .div3 p span:hover {
+              .main .card .container .div3 p span:active {
                 color: #00fff7;
                 cursor: pointer; } }
 

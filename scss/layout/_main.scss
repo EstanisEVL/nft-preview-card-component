@@ -11,14 +11,28 @@
             background-color: $card-bg;
             @include flexbox (flex, column, nowrap, flex-start, center);
             border-radius: 15px;
-            // box-shadow: 10px 10px $main-bg;
+            box-shadow: 0px 40px 30px 30px hsl(222, 54%, 11%);
             .container{
-                margin-right: 25px;
-                margin-left: 25px;
-                img{
-                    margin-top: 25px;
-                    max-width: 100%;
+                max-width: 88%;
+                .image{
+                    @include flexbox (flex, column, nowrap, center, center);
+                    max-width: 300px;
+                    height: 310px;
+                    background-image: url(../../images/image-equilibrium.jpg);
+                    background-size: cover;
+                    margin-top: 20px;
                     border-radius: 10px;
+                    svg{
+                        display: none;
+                    }
+                    &:active{
+                        cursor: pointer;
+                        background: linear-gradient($cyan-overlay, $cyan-overlay), url(../../images/image-equilibrium.jpg);
+                        background-size: cover;
+                        svg{
+                            display: inline;
+                        }
+                    }
                 }
                 .div1{
                     margin-top: 25px;
@@ -28,6 +42,10 @@
                         color: $white;
                         font-size: $h1-font-size;
                         font-weight: 500;
+                        &:active{
+                            color: $cyan;
+                            cursor: pointer;
+                        }
                     }
                     p{
                         color: $soft-blue;
@@ -76,6 +94,10 @@
                         color: $soft-blue;
                         span{
                             color: $white;
+                            &:active{
+                                color: $cyan;
+                                cursor: pointer;
+                            }
                         }
                     } 
                 }
@@ -100,16 +122,26 @@
             box-shadow: 0px 40px 30px 30px hsl(220, 54%, 11%);
             .container{
                 max-width: 88%;
-                img{
-                    max-width: 100%;
+                .image{
+                    @include flexbox (flex, column, nowrap, center, center);
+                    width: 310px;
+                    height: 310px;
+                    background-image: url(../../images/image-equilibrium.jpg);
+                    background-size: cover;
                     margin-top: 20px;
                     border-radius: 10px;
-                    &:hover{
-                        
-                        background: url(images\icon-view.svg);
+                    svg{
+                        display: none;
+                    }
+                    &:active{
+                        cursor: pointer;
+                        background: linear-gradient($cyan-overlay, $cyan-overlay), url(../../images/image-equilibrium.jpg);
+                        background-size: cover;
+                        svg{
+                            display: inline;
+                        }
                     }
                 }
-                
                 .div1{
                     margin-top: 25px;
                     @include flexbox(flex, column, nowrap, flex-start, stretch);
@@ -118,7 +150,7 @@
                         color: $white;
                         font-size: $h1-font-size;
                         font-weight: 500;
-                        &:hover{
+                        &:active{
                             color: $cyan;
                             cursor: pointer;
                         }
@@ -170,7 +202,7 @@
                         color: $soft-blue;
                         span{
                             color: $white;
-                            &:hover{
+                            &:active{
                                 color: $cyan;
                                 cursor: pointer;
                             }
