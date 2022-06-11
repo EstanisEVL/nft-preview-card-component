@@ -28,9 +28,11 @@ Users should be able to:
 ### Screenshot
 
 Desktop:
+
 ![Desktop](Screenshot-FrontendMentor-NFTpreviewcardcomponent-Desktop.png)
 
 Mobile:
+
 ![Mobile](Screenshot-FrontendMentor-NFTpreviewcardcomponent-Mobile.png) 
 
 
